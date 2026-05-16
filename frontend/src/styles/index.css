@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply text-slate-800 dark:text-slate-100;
+}
+
+:root {
+  color-scheme: light;
+  --recruiter-bg: #f8fafc;
+  --recruiter-surface: rgba(255, 255, 255, 0.92);
+  --recruiter-border: rgba(15, 23, 42, 0.08);
+  --recruiter-text: #0f172a;
+  --recruiter-muted: #64748b;
+  --recruiter-accent: #2563eb;
+}
+
+:root.dark {
+  color-scheme: dark;
+  --recruiter-bg: #020617;
+  --recruiter-surface: rgba(15, 23, 42, 0.55);
+  --recruiter-border: rgba(148, 163, 184, 0.12);
+  --recruiter-text: #f1f5f9;
+  --recruiter-muted: #94a3b8;
+  --recruiter-accent: #22d3ee;
+}
+
+html {
+  transition: background-color 0.35s ease, color 0.35s ease;
+}
+
+.scrollbar-none {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+html:not(.dark) .role-theme {
+  background: #f8fafc !important;
+  color: #0f172a !important;
+}
+
+html:not(.dark) .role-theme > .fixed.inset-0,
+html:not(.dark) .role-theme [class*="bg-[radial-gradient"],
+html:not(.dark) .role-theme [class*="bg-[linear-gradient"] {
+  background: radial-gradient(circle at top left, rgba(99, 102, 241, 0.12), transparent 28%),
+    linear-gradient(135deg, #f8fafc 0%, #eef2ff 48%, #ecfeff 100%) !important;
+}
+
+html:not(.dark) .role-theme [class*="bg-[#020617"],
+html:not(.dark) .role-theme [class*="bg-slate-950"],
+html:not(.dark) .role-theme [class*="bg-slate-900"] {
+  background-color: rgba(255, 255, 255, 0.88) !important;
+}
+
+html:not(.dark) .role-theme [class*="bg-white/"],
+html:not(.dark) .role-theme [class*="bg-white["],
+html:not(.dark) .role-theme [class*="bg-white\\["] {
+  background-color: rgba(255, 255, 255, 0.72) !important;
+}
+
+html:not(.dark) .role-theme [class*="border-white/"] {
+  border-color: rgba(15, 23, 42, 0.1) !important;
+}
+
+html:not(.dark) .role-theme [class*="text-white"],
+html:not(.dark) .role-theme [class*="text-slate-100"],
+html:not(.dark) .role-theme [class*="text-slate-200"],
+html:not(.dark) .role-theme [class*="text-slate-300"] {
+  color: #0f172a !important;
+}
+
+html:not(.dark) .role-theme [class*="text-slate-400"],
+html:not(.dark) .role-theme [class*="text-slate-500"] {
+  color: #64748b !important;
+}
+
+html:not(.dark) .role-theme input,
+html:not(.dark) .role-theme textarea,
+html:not(.dark) .role-theme select {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  color: #0f172a !important;
+  border-color: rgba(15, 23, 42, 0.14) !important;
+}
+
+html:not(.dark) .role-theme option {
+  background-color: #ffffff;
+  color: #0f172a;
+}

@@ -1,0 +1,16 @@
+node_modules
+.env
+.env.*
+!.env.example
+!.env.docker.example
+dist
+build
+coverage
+*.log
+.DS_Store
+/.idea
+/.vscode
+backend/uploads
+Thumbs.db
+*.pem
+.env.local
